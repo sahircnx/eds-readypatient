@@ -215,5 +215,44 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "spacer",
+    "fields": [
+      {
+        "component": "select",
+        "name": "size",
+        "label": "Size",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Small (20px)",
+            "value": "small"
+          },
+          {
+            "name": "Medium (40px)",
+            "value": "medium"
+          },
+          {
+            "name": "Large (80px)",
+            "value": "large"
+          },
+          {
+            "name": "Extra Large (120px)",
+            "value": "xlarge"
+          },
+          {
+            "name": "Custom",
+            "value": "custom"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "customHeight",
+        "label": "Custom Height (e.g. 100px)",
+        "valueType": "string"
+      }
+    ]
   }
 ]
