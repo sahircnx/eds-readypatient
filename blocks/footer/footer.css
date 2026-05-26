@@ -1,20 +1,139 @@
 footer {
-  background-color: var(--light-color);
+  background-color: #00344b;
+  color: #fff;
+  font-family: var(--body-font-family);
   font-size: var(--body-font-size-xs);
 }
 
-footer .footer > div {
+footer .footer>div {
   margin: auto;
   max-width: 1200px;
-  padding: 40px 24px 24px;
+  padding: 48px 24px;
+  box-sizing: border-box;
 }
 
-footer .footer p {
+@media (width >=900px) {
+  footer .footer>div {
+    padding: 64px 32px 48px;
+  }
+}
+
+/* Links default styling */
+footer a:any-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* Nav Columns Row */
+
+footer .footer-nav>.default-content-wrapper {
+  display: flex;
+}
+
+footer .footer-nav-col {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+footer .footer-nav-col li {
   margin: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+footer .footer-nav-col a:any-link {
+  font-size: var(--body-font-size-s);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Legal disclaimer row */
+footer .footer-legal {
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+}
+
+footer .footer-legal p {
+  color: rgb(255 255 255 / 95%);
+  font-size: 13px;
+  line-height: 1.65;
+  margin: 0 0 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+@media (width >=900px) {
+  footer .footer-legal p {
+    font-size: 12px;
+  }
+}
+
+footer .footer-legal p:last-child {
+  margin-bottom: 0;
+}
+
+footer .footer-legal a:any-link {
+  text-decoration: underline;
+}
+
+/* Bottom utilities and copyright row */
+footer .footer-bottom {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+footer .footer-bottom-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.75rem;
+}
+
+footer .footer-bottom-links a:any-link {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+@media (width >=900px) {
+  footer .footer-bottom-links a:any-link {
+    font-size: 12px;
+  }
+}
+
+footer .footer-copyright {
+  margin: 0;
+  font-size: 13px;
+  color: rgb(255 255 255 / 60%);
+  font-weight: 400;
+}
+
+@media (width >=900px) {
+  footer .footer-copyright {
+    font-size: 12px;
+  }
+}
+
+@media (width >=900px) {
+  footer .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
   }
 }

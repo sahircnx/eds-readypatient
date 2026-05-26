@@ -16,5 +16,24 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
+  // Identify footer rows and add semantic classes
+  const rows = [...footer.children];
+  if (rows[0]) rows[0].classList.add('footer-nav');
+  if (rows[1]) rows[1].classList.add('footer-legal');
+  if (rows[2]) rows[2].classList.add('footer-bottom');
+
+  // Decorate navigation columns
+  if (rows[0]) {
+    rows[0].querySelectorAll('ul').forEach((ul) => ul.classList.add('footer-nav-col'));
+  }
+
+  // Decorate bottom utility section
+  if (rows[2]) {
+    const ul = rows[2].querySelector('ul');
+    if (ul) ul.classList.add('footer-bottom-links');
+    const p = rows[2].querySelector('p');
+    if (p) p.classList.add('footer-copyright');
+  }
+
   block.append(footer);
 }
