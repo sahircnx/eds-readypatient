@@ -1,0 +1,8 @@
+{
+  "mappings": [
+    "/content/eds-readypatient/:/"
+  ],
+  "includes": [
+    "/content/eds-readypatient/"
+  ]
+}
