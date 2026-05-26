@@ -30,6 +30,7 @@
         "component": "reference",
         "name": "image",
         "label": "Image",
+        "root": "/content/dam/eds-readypatient",
         "multi": false
       },
       {
